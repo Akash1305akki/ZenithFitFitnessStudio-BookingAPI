@@ -1,0 +1,78 @@
+
+📌 ZenithFit Fitness Studio - Booking API – Sample Payloads & Inputs
+
+------------------------------------------
+1. POST /create-class
+------------------------------------------
+Payload:
+{
+  "name": "Yoga",
+  "datetime": "2025-07-10T08:00:00",
+  "instructor": "Rina",
+  "slots": 5
+}
+
+{
+  "name": "Zumba",
+  "datetime": "2025-07-11T10:00:00",
+  "instructor": "Amit",
+  "slots": 3
+}
+
+{
+  "name": "HIIT",
+  "datetime": "2025-07-12T06:30:00",
+  "instructor": "Leena",
+  "slots": 4
+}
+
+------------------------------------------
+2. GET /classes?timezone=Asia/Kolkata
+(No payload, just query param)
+
+------------------------------------------
+3. GET /classes/available
+(No payload)
+
+------------------------------------------
+4. POST /book
+------------------------------------------
+Payload:
+{
+  "class_id": 1,
+  "client_name": "Akash",
+  "client_email": "akash@example.com"
+}
+
+------------------------------------------
+5. GET /bookings?email=akash@example.com
+(No payload, just query param)
+
+------------------------------------------
+6. GET /bookings/all
+(No payload)
+
+------------------------------------------
+7. GET /class/{class_id}
+Example:
+/class/1
+
+------------------------------------------
+8. PUT /update-class/{class_id}
+Example: /update-class/1
+
+Payload:
+{
+  "name": "Advanced Yoga",
+  "datetime": "2025-07-10T09:00:00",
+  "instructor": "Rina",
+  "slots": 10
+}
+
+------------------------------------------
+9. DELETE /class/{class_id}
+Example: /class/2
+
+------------------------------------------
+10. GET /analytics/summary
+(No payload)
